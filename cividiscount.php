@@ -470,6 +470,10 @@ function cividiscount_civicrm_buildAmount($pageType, &$form, &$amounts) {
         'contact_id' => $contact_id,
       ]);
     }
+    else {
+      // No discount, hide options.
+      unset($amounts[1445]['options'][4117], $amounts[1445]['options'][4118]);
+    }
   }
 }
 
